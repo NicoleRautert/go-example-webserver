@@ -1,6 +1,13 @@
 node {
 
     checkout scm
+    
+  def DOCKER_HUB_ACCOUNT = 'NicoleRautert'
+  def DOCKER_IMAGE_NAME = 'go-example-webserver'
+
+  echo 'Building Docker image'
+  stage('BuildImage') 
+  def app = docker.build("${DOCKER_HUB_ACCOUNT}/${DOCKER_IMAGE_NAME}", '.')
 
     echo 'Building Go App'
     stage("build") {
