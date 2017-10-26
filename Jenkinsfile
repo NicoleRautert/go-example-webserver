@@ -7,7 +7,7 @@ node {
 
   echo 'Building Docker image'
   stage('BuildImage') 
-  def app = docker.build("${DOCKER_HUB_ACCOUNT}/${DOCKER_IMAGE_NAME}", '--label build-date="$(date)" .')
+  def app = docker.build("${DOCKER_HUB_ACCOUNT}/${DOCKER_IMAGE_NAME}", '--label build-date=\"$(date)\" .')
 
     echo 'Building Go App'
     stage("build") {
