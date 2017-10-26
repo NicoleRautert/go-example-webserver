@@ -2,7 +2,7 @@ node {
 
     checkout scm
     
-  def DOCKER_HUB_ACCOUNT = 'nicolerautert'
+  def DOCKER_HUB_ACCOUNT = 'Rautenic'
   def DOCKER_IMAGE_NAME = 'go-example-webserver'
 
   echo 'Building Docker image'
