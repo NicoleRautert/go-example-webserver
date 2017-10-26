@@ -32,7 +32,7 @@ node {
     
     stage("Push")
     echo 'Pushing Docker Image'
-    docker.withRegistry(' https://localhost:5000', 'docker-hub') {
+    docker.withRegistry('https://index.docker.io/v1/', 'docker-hub') {
         app.push("prod")
     }
     
