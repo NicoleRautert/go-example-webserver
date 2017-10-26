@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: go-example-webserver
-          image: <docker-hub-username>/go-example-webserver
+          image: rautenic/go-example-webserver
           ports:
             - containerPort: 8080
