@@ -33,7 +33,7 @@ node {
     stage("Push")
     echo 'Pushing Docker Image'
     docker.withRegistry(' https://localhost:5000', 'docker-hub') {
-        app.push()
+        app.push("prod")
     }
     
     def K8S_DEPLOYMENT_NAME = 'go-example-webserver'
